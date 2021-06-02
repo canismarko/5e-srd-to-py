@@ -41,7 +41,6 @@ class {classname}(Monster):
     climb_speed = {speed_climb}
     hp_max = {hit_points}
     hit_dice = "{hit_dice}"
-
 '''
 
 def get_attacks(monster_data):
