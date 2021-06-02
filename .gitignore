@@ -132,6 +132,6 @@ dmypy.json
 *.idea
 
 # Outputs from the code
-local_data/*.shlf
+local_data/*.shlf.*
 output_files/*.py
 
