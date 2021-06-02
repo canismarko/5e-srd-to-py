@@ -7,6 +7,15 @@ to their project portfolio in https://github.com/5e-bits.
 
 ## Running this Program
 
+You will need to have `requests` to run the `read_` scripts which
+use the 5e API.
+
+The general flow of this tool is:
+
+1. Run one of the `read_` scripts to get some data from a CSV file or the 5e API
+2. Run the corresponding `write_` script that reads the `shelf` file written by the `read` script to create a python script
+3. Include the auto-generated python script into the library you want.
+
 ### Read Scripts
 
 Scripts that start with `read_` are meant to read the
