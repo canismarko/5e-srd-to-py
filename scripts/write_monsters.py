@@ -35,9 +35,10 @@ class {classname}(Monster):
     intelligence = Ability({intelligence})
     wisdom = Ability({wisdom})
     charisma = Ability({charisma})
-    speed = "{speed_walk}"
-    swim_speed = "{speed_swim}"
-    fly_speed = "{speed_fly}"
+    speed = {speed_walk}
+    swim_speed = {speed_swim}
+    fly_speed = {speed_fly}
+    climb_speed = {speed_climb}
     hp_max = {hit_points}
     hit_dice = "{hit_dice}"
 
@@ -104,12 +105,12 @@ def get_monster_string(monster_data):
     data["classname"] = "".join(monster_data["name"].split())
     data["description"] = get_attacks(monster_data)
     data["skills"] = get_skills(monster_data)
-    data["speed_walk"] = " ".join(monster_data["speed"].get("walk", "0").split())
-    data["speed_swim"] = " ".join(monster_data["speed"].get("swim", "0").split())
-    data["speed_fly"] = " ".join(monster_data["speed"].get("fly", "0").split())
+    data["speed_walk"] = (monster_data["speed"].get("walk", "0").split()[0])
+    data["speed_swim"] = (monster_data["speed"].get("swim", "0").split()[0])
+    data["speed_fly"] = (monster_data["speed"].get("fly", "0").split()[0])
+    data["speed_climb"] = (monster_data["speed"].get("climb", "0").split()[0])
     data["senses"] = get_senses(monster_data)
     ret = (individual_class.format(**data))
-    print(ret)
     return ret
 
 def write_monsters():
