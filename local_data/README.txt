@@ -1,0 +1,1 @@
+This directory contains *.shlf files to use in lieu of hitting the 5e db over and over again

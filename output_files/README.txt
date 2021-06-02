@@ -1,0 +1,1 @@
+This directory contains a bunch of python output files that are created by the "make" files in the scripts directory.
