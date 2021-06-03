@@ -12,7 +12,7 @@ use the 5e API.
 
 The general flow of this tool is:
 
-1. Run one of the `read_` scripts to get some data from a CSV file or the 5e API
+1. Run one of the `read_` scripts to get some data from a CSV file or the 5e API into a `shelf` file
 2. Run the corresponding `write_` script that reads the `shelf` file written by the `read` script to create a python script
 3. Include the auto-generated python script into the library you want.
 
